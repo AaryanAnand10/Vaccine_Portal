@@ -1,0 +1,79 @@
+import os
+
+class Node:
+    def __init__(self, name, gen, idtype, id, mob, comor):
+        self.name = name
+        self.gen = gen
+        self.idtype = idtype
+        self.id = id
+        self.mob = mob
+        self.comor = comor
+        self.link = None
+
+start = None
+
+# Global Variables
+n = 0
+state = ""
+dis = ""
+hos = ""
+date = ""
+hour = ""
+
+# Declaring Function Used In This Program
+def heading():
+    print("Heading")
+
+def details():
+    global n
+    global state
+    global dis
+    global hos
+    global date
+    global hour
+
+    # Calling Heading() Function
+    heading()
+    print("\t\t\t\tEnter Candidate Number (Max 4 People): ")
+    n = int(input())
+
+    # Taking Candidate Details
+    for i in range(1, n+1):
+        # For Clear Screen
+        os.system("cls")
+        # Calling Heading() Function
+        heading()
+        print("\t\t\t\tEnter The %dth Candidate Name: " % i)
+        a = input()
+        print("\t\t\t\tEnter The %dth Candidate Gender: " % i)
+        b = input()
+        print("\t\t\t\tEnter The %dth Candidate Id-Type: " % i)
+        c = input()
+        print("\t\t\t\tEnter The %dth Candidate Id-Number: " % i)
+        d = input()
+        print("\t\t\t\tEnter The %dth Candidate Mobile Number: " % i)
+        e = input()
+        print("\t\t\t\tEnter The %dth Candidate Comor: " % i)
+        f = input()
+        # Create a new node
+        new_node = Node(a, b, c, d, e, f)
+        # Add the new node to the linked list
+        if start is None:
+            start = new_node
+        else:
+            current = start
+            while current.link is not None:
+                current = current.link
+            current.link = new_node
+
+def venue():
+    print("Venue")
+
+def receipt():
+    print("Receipt")
+
+# Driver Code
+if __name__ == "__main__":
+    details()
+    venue()
+    receipt()
