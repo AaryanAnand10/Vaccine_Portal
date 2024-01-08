@@ -1,2 +1,2 @@
-# PPS1
-Aim to Create a GUI by using Python or C 
+# Overview :-
+The Candidate Registration and Vaccination Suggestion System is a software solution designed to streamline the process of registering individuals for a mass vaccination drive while providing personalized vaccine recommendations based on age. This project aims to enhance the efficiency of public health initiatives, specifically in the context of organizing and managing large-scale vaccination campaigns, such as those conducted during the COVID-19 pandemic.
